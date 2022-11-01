@@ -38,6 +38,9 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtLocation = new System.Windows.Forms.TextBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.btnWriteStream = new System.Windows.Forms.Button();
+            this.btnReadStream = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnRead
@@ -62,7 +65,7 @@
             // 
             // btnDirectory
             // 
-            this.btnDirectory.Location = new System.Drawing.Point(57, 278);
+            this.btnDirectory.Location = new System.Drawing.Point(55, 239);
             this.btnDirectory.Name = "btnDirectory";
             this.btnDirectory.Size = new System.Drawing.Size(75, 51);
             this.btnDirectory.TabIndex = 2;
@@ -72,7 +75,7 @@
             // 
             // btnFile
             // 
-            this.btnFile.Location = new System.Drawing.Point(234, 278);
+            this.btnFile.Location = new System.Drawing.Point(234, 239);
             this.btnFile.Name = "btnFile";
             this.btnFile.Size = new System.Drawing.Size(75, 51);
             this.btnFile.TabIndex = 3;
@@ -128,11 +131,42 @@
             this.txtLocation.Size = new System.Drawing.Size(149, 20);
             this.txtLocation.TabIndex = 9;
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(380, 44);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(177, 106);
+            this.richTextBox1.TabIndex = 10;
+            this.richTextBox1.Text = "";
+            // 
+            // btnWriteStream
+            // 
+            this.btnWriteStream.Location = new System.Drawing.Point(380, 184);
+            this.btnWriteStream.Name = "btnWriteStream";
+            this.btnWriteStream.Size = new System.Drawing.Size(177, 39);
+            this.btnWriteStream.TabIndex = 11;
+            this.btnWriteStream.Text = "Write Using Stream";
+            this.btnWriteStream.UseVisualStyleBackColor = true;
+            this.btnWriteStream.Click += new System.EventHandler(this.btnWriteStream_Click);
+            // 
+            // btnReadStream
+            // 
+            this.btnReadStream.Location = new System.Drawing.Point(380, 239);
+            this.btnReadStream.Name = "btnReadStream";
+            this.btnReadStream.Size = new System.Drawing.Size(177, 36);
+            this.btnReadStream.TabIndex = 12;
+            this.btnReadStream.Text = "Read Using Stream";
+            this.btnReadStream.UseVisualStyleBackColor = true;
+            this.btnReadStream.Click += new System.EventHandler(this.btnReadStream_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 361);
+            this.ClientSize = new System.Drawing.Size(582, 341);
+            this.Controls.Add(this.btnReadStream);
+            this.Controls.Add(this.btnWriteStream);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.txtLocation);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtID);
@@ -162,5 +196,8 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtLocation;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button btnWriteStream;
+        private System.Windows.Forms.Button btnReadStream;
     }
 }

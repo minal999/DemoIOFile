@@ -87,6 +87,40 @@ namespace DemoIOFile
             }
         }
 
-     
+        private void btnWriteStream_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FileStream fs = new FileStream(@"D:\DemoIOFile\Info.txt", FileMode.Create, FileAccess.Write);
+                StreamWriter sw = new StreamWriter(fs);
+                sw.WriteLine(richTextBox1.Text);
+                sw.Close();
+                fs.Close();
+                MessageBox.Show("Saved the data");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnReadStream_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FileStream fs = new FileStream(@"D:\DemoIOFile\Info.txt", FileMode.Open, FileAccess.Read);
+                StreamReader sr = new StreamReader(fs);
+                richTextBox1.Text = sr.ReadToEnd();
+                sr.Close();
+                fs.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }
+
